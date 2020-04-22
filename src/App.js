@@ -116,7 +116,7 @@ export default class App extends Component {
     return (
       <div>        
         <div>
-          <Modal open={open} onClose={this.onCloseModal} center> //pop up message
+          <Modal open={open} onClose={this.onCloseModal} center> 
             <p>Welcome to our project about Climate Change <br></br>  
               Use buttons on the map to navigate or the web interface buttons if no connection to the server <br></br>
               To enable to first video to play please use controls
