@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0ad4f930.chunk.css",
+    "main.js": "/static/js/main.d5a0e3d8.chunk.js",
+    "main.js.map": "/static/js/main.d5a0e3d8.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.f27ca90a.chunk.js": "/static/js/2.f27ca90a.chunk.js",
+    "static/js/2.f27ca90a.chunk.js.map": "/static/js/2.f27ca90a.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.a790ca67848d57f270b7fdd520d01bff.js": "/precache-manifest.a790ca67848d57f270b7fdd520d01bff.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.0ad4f930.chunk.css.map": "/static/css/main.0ad4f930.chunk.css.map",
+    "static/media/Antarctica.mov": "/static/media/Antarctica.8aec2fae.mov",
+    "static/media/Australia.mov": "/static/media/Australia.566a071e.mov",
+    "static/media/Europe.mov": "/static/media/Europe.904d8bf0.mov"
+  }
+}

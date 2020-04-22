@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+}
+img{
+  max-width: 26vmin;
+  width: 100%;
+  height: auto;
+}
+
+.continents{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.button{
+  background-color: #ffffff00;
+  border-color: #ffffff;
+  margin: 3em;
+}
+.button:active{
+outline: none;
+border-color: #ffffff00;
+}
+
+.button:focus{
+  outline: none;
+}
+
+
+.videoPlayer{
+text-align: center;
+margin: 0em 5em 3em 5em;
+}
+
+.react-responsive-modal-modalCenter {
+  margin: auto;
+  padding: 4em;
+}
