@@ -29,7 +29,7 @@ export default class App extends Component {
       open: true,
     };
 
-    this.x = 0;
+    this.x = 0;         
     this.y = 0;
     this.z = 0;
     this.received = false;
@@ -37,9 +37,8 @@ export default class App extends Component {
   }
 
   // 'https://www.youtube.com/watch?v=jskGbAwcBuI'
-  showEurope = () => {
+  showEurope = () => { //function triggered by button (below) which set a source state (by using setState) to Europe (Europe has assigned video at the top)
     this.setState({ source: Europe });
-
   }
 
   showAntarctica = () => {
@@ -56,11 +55,11 @@ export default class App extends Component {
   }
 
 
-  onOpenModal = () => {
+  onOpenModal = () => { //pop-up message open
     this.setState({ open: true });
   };
 
-  onCloseModal = () => {
+  onCloseModal = () => { //pop-up message close
     this.setState({ open: false });
 };
 
@@ -87,25 +86,25 @@ export default class App extends Component {
     }).bind(this)); // we have to explicitly bind this to the upper execution context so that we can call this.receiveOSC()
   }
 
-  receiveOsc(address, value) {
+  receiveOsc(address, value) { //receiving the data from osc
     this.received = true;
 
     if (this.received) {
       console.log("received OSC: " + address + ", " + value);
 
-      if (address === '/analogue') {
+      if (address === '/analogue') { //getting the data from the arduino 
         // this.setState({ con: "connected" });
-        this.x = value[0];
+        this.x = value[0]; //variable for the data coming from the arduino
         this.y = value[1];
         this.z = value[2];
-        if (this.x === 0 && this.y === 1 && this.z === 1) {
+        if (this.x === 0 && this.y === 1 && this.z === 1) { //if the first button pressed plays Europe video
           this.setState({ source: Europe });
-        } else if (this.x === 1 && this.y === 0 && this.z === 1) {
+        } else if (this.x === 1 && this.y === 0 && this.z === 1) { //if the second button pressed plays Australia video
           this.setState({ source: Australia });
-        } else if (this.x === 1 && this.y === 1 && this.z === 0) {
+        } else if (this.x === 1 && this.y === 1 && this.z === 0) { //if the third button pressed plays Antarctica video
           this.setState({ source: Antarctica });
         } else {
-          this.setState({ source: Looping });
+          this.setState({ source: Looping }); //if no buttons are pressed play the loop video
         }
 
       }
@@ -117,8 +116,8 @@ export default class App extends Component {
     return (
       <div>        
         <div>
-          <Modal open={open} onClose={this.onCloseModal} center>
-            <p>Welcome to our project about global warming <br></br>
+          <Modal open={open} onClose={this.onCloseModal} center> //pop up message
+            <p>Welcome to our project about Climate Change <br></br>  
               Use buttons on the map to navigate or the web interface buttons if no connection to the server <br></br>
               To enable to first video to play please use controls
             </p>
